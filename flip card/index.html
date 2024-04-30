@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flip card</title>
+    <style>
+        .main
+        {
+            height: 500px;
+            width: 500px;
+            perspective: 1000px;
+            margin: auto;
+        }
+        .container
+        {
+            height: 100%;
+            width: 100%;
+            transition: transform 0.5s;
+            transform-style: preserve-3d;
+        }
+        .main:hover .container
+        {
+            transform: rotateY(180deg);
+        }
+        .front,.back
+        {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            backface-visibility: hidden;
+        }
+        .front
+        {
+            background-color: black;
+            color: aliceblue;
+        }
+        .back
+        {
+            background-color: white;
+            color: gray;
+            transform: rotateY(180deg);
+        }
+        .back h2
+        {
+            word-spacing: 10px;
+            font-style: italic;
+            font-size: 40px;
+            letter-spacing: 1px;
+        }
+</style>
+</head>
+<body>
+    <div class="rec" style="background-color: black;height:700px;width: 100%;">
+    <div class="main">
+        <div class="container">
+            <div class="front">
+                <img src="1.jpg" alt="" style="height:500px;width:500px;">
+            </div>
+            <div class="back">
+                <h2>Black cars in India have always been a unique choice.a black car looks classy on the road, and it will grab attention. That's the reason why black cars are considered unique.</h2>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
